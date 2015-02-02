@@ -1,0 +1,23 @@
+<template name="Vote">
+
+{{#unless questions}}
+		<div class="jumbotron home">
+		<div class="container home">
+		<h3>Wait for question..</h3>
+		</div>
+		</div>
+{{else}}
+	{{#each questions}}
+	<div class="jumbotron home">
+		<div class="container home">
+				<h3>{{question}}</h3>
+			</div>
+			<div>
+				{{#each answers}}
+					<button class="btn btn-default answer" data-question="{{../_id}}" data-answer="{{answer}}">{{answer}}</button><br><br>
+				{{/each}}
+			</div>
+	</div>
+	{{/each}}
+{{/unless}}
+</template>

@@ -1,0 +1,26 @@
+<template name="Questions">
+<i class="fa fa-edit"></i> <a href="{{pathFor 'newQuestion'}}">Add</a>
+{{#unless questions}}
+		<div class="jumbotron home">
+		<div class="container home">
+		<h2>No questions</h2>
+		</div>
+		</div>
+{{else}}
+	{{#each questions}}
+	<div class="jumbotron home">
+		<div class="container home">
+				<h2>{{question}}</h2>
+				<i class="fa fa-edit"></i> <a href="{{pathFor 'editQuestion'}}">Edit</a><br>
+				{{#if show}}<button class="btn btn-success">Visible</button>{{/if}}
+			</div>
+			<div>
+			Options:
+				{{#each answers}}
+					{{answer}}<br>
+				{{/each}}
+			</div>
+	</div>
+	{{/each}}
+{{/unless}}
+</template>

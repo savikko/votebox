@@ -1,0 +1,9 @@
+<template name="Answers">
+{{#each questions}}
+ <h2>{{question}}</h2>
+ <h4>Answerers total: {{totalanswers _id}}</h4>
+ {{#each answers}}
+ <b>{{answer}}: {{answercount answer ../_id}}</b><br>
+ {{/each}}
+{{/each}}
+</template>
