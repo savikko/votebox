@@ -1,7 +1,11 @@
 Template.Vote.helpers({
   questions: function() {
-  	questions = Questions.find({show: true, "answerers.id": {$nin: [Cookie.get('answerer')]}}).fetch();
+  	questions = Questions.find({show: true, "answerers.id": {$nin: [Cookie.get('answerer')]}},{limit: 1}).fetch();
   	return questions;
+  },
+  questionsToGo: function() {
+    questionsToGo = Questions.find({show: true, "answerers.id": {$nin: [Cookie.get('answerer')]}}).count();
+    return questionsToGo;
   }
 });
 

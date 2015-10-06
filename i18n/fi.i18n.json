@@ -5,5 +5,6 @@
   "new_question_added": "Uusi kysymys lisätty",
   "wait_for_question": "Kiitos! Olet vastannut kaikkiin kysymyksiin.",
   "question": "Kysymys",
-  "click_your_answer": "Klikkaa vastausvaihtoehtoa:"
+  "click_your_answer": "Klikkaa vastausvaihtoehtoa:",
+  "questionsToGo": "Kysymyksiä jäljellä"
 }
