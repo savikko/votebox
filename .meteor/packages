@@ -44,3 +44,4 @@ spacebars
 check
 tap:i18n
 tap:i18n-ui
+jabbslad:basic-auth

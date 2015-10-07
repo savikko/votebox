@@ -8,6 +8,11 @@ Template.Answers.helpers({
   },
   totalanswers: function(question) {
     return Answers.find({question: question}).fetch().length;
+  },
+  percent: function(answer, question) {
+    answerscount =  Answers.find({answer: answer, question: question}).fetch().length;
+    totalanswerers = Answers.find({question: question}).fetch().length;
+    return Math.round(answerscount/totalanswerers*100);
   }
 });
 

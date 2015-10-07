@@ -1,9 +1,19 @@
 <template name="Answers">
 {{#each questions}}
- <h2>{{question}}</h2>
- <h4>Answerers total: {{totalanswers _id}}</h4>
- {{#each answers}}
- <b>{{answer}}: {{answercount answer ../_id}}</b><br>
- {{/each}}
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{question}}</h3>
+    </div>
+    <div class="panel-body">
+      <h4>Answerers total: {{totalanswers _id}}</h4>
+        {{#each answers}}
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{answercount answer ../_id}}" aria-valuemin="0" aria-valuemax="{{totalanswers ../_id}}" style="width: {{percent answer ../_id}}%">
+              {{answer}} ({{answercount answer ../_id}} kpl) - {{percent answer ../_id}} %
+            </div>
+          </div>
+        {{/each}}
+    </div>
+  </div>
 {{/each}}
 </template>
