@@ -5,7 +5,7 @@
       <h3 class="panel-title">{{question}}</h3>
     </div>
     <div class="panel-body">
-      <h4>Answerers total: {{totalanswers _id}}</h4>
+      <h4>{{_ "answerers_total"}}: {{totalanswers _id}}</h4>
         {{#each answers}}
           <div class="progress">
             <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{answercount answer ../_id}}" aria-valuemin="0" aria-valuemax="{{totalanswers ../_id}}" style="width: {{percent answer ../_id}}%">

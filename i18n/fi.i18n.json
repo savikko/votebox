@@ -6,5 +6,6 @@
   "wait_for_question": "Kiitos! Olet vastannut kaikkiin kysymyksiin.",
   "question": "Kysymys",
   "click_your_answer": "Klikkaa vastausvaihtoehtoa:",
-  "questionsToGo": "Kysymyksiä jäljellä"
+  "questionsToGo": "Kysymyksiä jäljellä",
+  "answerers_total": "Vastaajia yhteensä"
 }

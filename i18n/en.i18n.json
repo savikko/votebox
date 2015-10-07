@@ -6,5 +6,6 @@
   "wait_for_question": "Wait for question..",
   "question": "Question",
   "click_your_answer": "Click on your answer option",
-  "questionsToGo": "Questions to go"
+  "questionsToGo": "Questions to go",
+  "answerers_total": "Answerers total"
 }
