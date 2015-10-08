@@ -16,20 +16,33 @@
 			  <div class="panel-body">
 			    {{_ "click_your_answer"}}
 			    <br><br>
-					<div class="btn-group btn-group-justified" role="group" aria-label="Answer options">
-						{{#each answers}}
-						<div class="btn-group" role="group">
-								<button class="btn btn-default answer" type="button" data-question="{{../_id}}" data-answer="{{answer}}">{{answer}}</button>
+					<div class="hidden-xs"> <!-- for desktops, tablets -->
+						<div class="btn-group btn-group-justified" role="group" aria-label="Answer options">
+							{{#each answers}}
+							<div class="btn-group" role="group">
+									<button class="btn btn-default answer" type="button" data-question="{{../_id}}" data-answer="{{answer}}">{{answer}}</button>
+							</div>
+							{{/each}}
 						</div>
-						{{/each}}
+					</div>
+					<div class="visible-xs-block">
+						<div class="row">
+	    				<div class="col-xs-10 col-xs-offset-1"> <!-- to make this centered -->
+								<div class="btn-group-vertical" role="group" aria-label="Answer options" style="width:100%">
+									{{#each answers}}
+											<button class="btn btn-default answer" type="button" data-question="{{../_id}}" data-answer="{{answer}}">{{answer}}</button>
+									{{/each}}
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	{{/each}}
 	<div class="row">
-    <div class="col-md-2 col-md-offset-5">
-		  <button class="btn btn-info" type="button">
+    <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-5">
+		  <button class="btn btn-info" type="button" style="width:100%">
 		 		{{_ "questionsToGo"}} <span class="badge">{{questionsToGo}}</span>
 			</button>
     </div>
