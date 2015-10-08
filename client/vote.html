@@ -16,7 +16,7 @@
 			  <div class="panel-body">
 			    {{_ "click_your_answer"}}
 			    <br><br>
-					<div class="hidden-xs"> <!-- for desktops, tablets -->
+					<div class="hidden-xs hidden-sm"> <!-- for desktops, tablets -->
 						<div class="btn-group btn-group-justified" role="group" aria-label="Answer options">
 							{{#each answers}}
 							<div class="btn-group" role="group">
@@ -25,9 +25,9 @@
 							{{/each}}
 						</div>
 					</div>
-					<div class="visible-xs-block">
+					<div class="visible-xs-block visible-sm-block">
 						<div class="row">
-	    				<div class="col-xs-10 col-xs-offset-1"> <!-- to make this centered -->
+	    				<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1"> <!-- to make this centered -->
 								<div class="btn-group-vertical" role="group" aria-label="Answer options" style="width:100%">
 									{{#each answers}}
 											<button class="btn btn-default answer" type="button" data-question="{{../_id}}" data-answer="{{answer}}">{{answer}}</button>
@@ -41,7 +41,7 @@
 		</div>
 	{{/each}}
 	<div class="row">
-    <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-5">
+    <div class="col-xs-10 col-xs-offset-1 col-md-2 col-md-offset-5 col-sm-10 col-sm-offset-1">
 		  <button class="btn btn-info" type="button" style="width:100%">
 		 		{{_ "questionsToGo"}} <span class="badge">{{questionsToGo}}</span>
 			</button>
