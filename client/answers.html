@@ -8,15 +8,19 @@
       <h4>{{_ "answerers_total"}}: {{totalanswers _id}}</h4>
         {{#each answers}}
         <div class="row">
-          <div class="col-md-offset-1 col-md-1">{{answer}}</div>
-          <div class="col-md-9">
+         <div class="col-md-12">
+          <b>{{answer}}</b>
+         </div>
+        </div>
+        <div class="row">
+          <div class="col-md-1">{{answercount answer ../_id}} kpl</div>
+          <div class="col-md-11">
             <div class="progress">
               <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{answercount answer ../_id}}" aria-valuemin="0" aria-valuemax="{{totalanswers ../_id}}" style="width: {{percent answer ../_id}}%">
-                {{answercount answer ../_id}} kpl
+                {{percent answer ../_id}} %
               </div>
             </div>
           </div>
-          <div class="col-md-1">{{percent answer ../_id}} %</div>
         </div>
         {{/each}}
     </div>
