@@ -1,4 +1,4 @@
-AnswersCounts.remove({}); // Clear answercounts on start 
+AnswerCounts.remove({}); // Clear answercounts on start 
 
 Answers.find({}).observeChanges({
     added : function (id, fields) {
